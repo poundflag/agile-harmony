@@ -14,3 +14,10 @@ services:
     volumes:
       - ./api:/usr/src/app
     command: ["mvn", "spring-boot:run"]
+  doc:
+    build: ./doc
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./doc:/usr/doc
+    command: ["mkdocs", "serve"]

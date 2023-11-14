@@ -1,0 +1,5 @@
+site_name: Agile-Harmony Documentation
+dev_addr: 0.0.0.0:8000
+nav:
+  - Home: index.md
+  - About: test.md
