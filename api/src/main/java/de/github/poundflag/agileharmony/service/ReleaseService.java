@@ -30,8 +30,8 @@ public class ReleaseService {
                                 List.of(
                                                 new Sprint("1", "Sprint 1", "Finished"),
                                                 new Sprint("2", "Sprint 2", "Finished"),
-                                                new Sprint("3", "Sprint 3", "Finished"),
-                                                new Sprint("4", "Sprint 4", "Running"),
+                                                new Sprint("3", "Sprint 3", "Running"),
+                                                new Sprint("4", "Sprint 4", "Open"),
                                                 new Sprint("4", "Sprint 5", "Open"))));
 
                 releaseList.add(new Release("1", "v 1.2",
