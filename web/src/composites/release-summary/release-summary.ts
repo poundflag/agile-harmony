@@ -13,8 +13,8 @@ export class ReleaseSummary extends LitElement {
       .main-container {
         border-radius: 2rem;
         padding: 0.5rem 2rem;
-        width: fit-content;
-        height: fit-content;
+        width: 210px;
+        height: 230px;
         position: relative;
         background-color: var(--surface-dim);
         color: var(--on-surface);
@@ -30,12 +30,15 @@ export class ReleaseSummary extends LitElement {
       }
 
       .bottom-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
         height: fit-content;
         width: fit-content;
         margin: auto;
+      }
+
+      .sprint-selection {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
       }
 
       .release-info {
@@ -59,6 +62,39 @@ export class ReleaseSummary extends LitElement {
         transform: translateY(-50%);
         left: 5%;
       }
+
+      .button-green {
+        --harmony-button-border: #31cb00;
+        --harmony-button-border-radius: 0.5rem;
+      }
+
+      .button-orange {
+        --harmony-button-border: #e07503;
+        --harmony-button-border-radius: 0.5rem;
+      }
+
+      .button-gray {
+        --harmony-button-border: #ddd5d0;
+        --harmony-button-border-radius: 2rem;
+      }
+
+      .info-button-green {
+        --info-button-border: #31cb00;
+        --info-button-text: white;
+        --info-button-border-radius: 0;
+      }
+
+      .info-button-orange {
+        --info-button-border: #e07503;
+        --info-button-text: white;
+        --info-button-border-radius: 2rem;
+      }
+
+      .info-button-gray {
+        --info-button-border: #ddd5d0;
+        --info-button-text: #2d2d2d;
+        --info-button-border-radius: 0;
+      }
     `,
   ];
 
@@ -81,14 +117,17 @@ export class ReleaseSummary extends LitElement {
         <hr class="horizontal-space" />
         <br />
         <div class="bottom-container">
-          ${repeat(
-            this.getSprintSelection(),
-            (sprint: Sprint) => sprint.id,
-            (sprint: Sprint) =>
-              html`<harmony-button class="sprint-element button-green"
-                >${sprint.name}</harmony-button
-              >`,
-          )}
+          <div class="sprint-selection">
+            ${repeat(
+              this.getSprintSelection(),
+              (sprint: Sprint) => sprint.id,
+              (sprint: Sprint) =>
+                html`<harmony-button class="sprint-element button-green"
+                  >${sprint.name}</harmony-button
+                >`,
+            )}
+          </div>
+          <harmony-button>More</harmony-button>
         </div>
       </div>
     `;
