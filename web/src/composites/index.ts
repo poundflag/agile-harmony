@@ -1,2 +1,3 @@
 import './release-summary/release-summary';
-import '../composites/topbar/topbar';
+import './topbar/topbar';
+import './team-member-card/team-member-card';

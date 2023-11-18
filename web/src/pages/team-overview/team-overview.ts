@@ -18,6 +18,6 @@ export class TeamOverview extends LitElement implements AfterEnterObserver {
   }
 
   render() {
-    return html`Hello`;
+    return html`<team-member-card></team-member-card>`;
   }
 }
