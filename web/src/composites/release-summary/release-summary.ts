@@ -38,6 +38,7 @@ export class ReleaseSummary extends LitElement {
                   class="sprint-element ${this._getSprintStatusColor(
                     sprint.status,
                   )}"
+                  @click="${() => this._onSprintClick(sprint.id)}"
                   >${sprint.name}</harmony-button
                 >`,
             )}
@@ -48,6 +49,10 @@ export class ReleaseSummary extends LitElement {
         </div>
       </div>
     `;
+  }
+
+  private _onSprintClick(sprintID: string) {
+    this.dispatchEvent(new CustomEvent('sprint-select', { detail: sprintID }));
   }
 
   private _getReleaseStatusColor() {
