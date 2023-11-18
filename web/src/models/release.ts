@@ -1,7 +1,8 @@
 import { Sprint } from './sprint';
 
 export interface Release {
-  releaseName: string;
+  id: string;
+  name: string;
   startDate: string;
   endDate: string;
   status: string;

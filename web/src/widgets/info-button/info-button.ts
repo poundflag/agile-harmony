@@ -31,6 +31,7 @@ export class InfoButton extends LitElement {
       font-weight: 700;
       width: fit-content;
       height: fit-content;type Color = 'red' | 'green' | 'blue';
+      box-shadow: 0px 0.5px 4px 0px #000000;
     }
   `;
 

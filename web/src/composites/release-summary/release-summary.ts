@@ -56,7 +56,6 @@ export class ReleaseSummary extends LitElement {
         border: none;
         height: 1px;
         background-color: rgb(0, 0, 0);
-        top: 50%;
         transform: translateY(-50%);
         left: 5%;
       }
@@ -70,7 +69,7 @@ export class ReleaseSummary extends LitElement {
     return html`
       <div class="main-container">
         <div class="top-container">
-          <h1>${this.release.releaseName}</h1>
+          <h1>${this.release.name}</h1>
           <div class="release-info">
             <p class="date">Start: ${this.release.startDate}</p>
             <info-button rounded="true" class="info-button-orange"
@@ -83,15 +82,19 @@ export class ReleaseSummary extends LitElement {
         <br />
         <div class="bottom-container">
           ${repeat(
-            this.release.sprints,
+            this.getSprintSelection(),
             (sprint: Sprint) => sprint.id,
             (sprint: Sprint) =>
-              html`<harmony-button class="sprint-element button-gray"
+              html`<harmony-button class="sprint-element button-green"
                 >${sprint.name}</harmony-button
               >`,
           )}
         </div>
       </div>
     `;
+  }
+
+  private getSprintSelection(): Sprint[] {
+    return this.release.sprints.slice(0, 4);
   }
 }

@@ -27,6 +27,7 @@ export class Button extends LitElement {
       font-weight: 700;
       width: fit-content;
       height: fit-content;
+      box-shadow: 0px 1px 2px 0px #000000;
     }
 
     .rounded {
