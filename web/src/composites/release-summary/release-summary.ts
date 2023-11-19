@@ -15,7 +15,7 @@ export class ReleaseSummary extends LitElement {
 
   render() {
     return html`
-      <div class="main-container">
+      <div class="main-container elevation-2">
         <div class="top-container">
           <h1>${this.release.name}</h1>
           <div class="release-info">

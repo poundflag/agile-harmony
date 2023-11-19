@@ -12,7 +12,6 @@ export class Topbar extends LitElement {
         padding: 1rem 2rem;
         margin-bottom: 1rem;
         border-radius: 0.5rem;
-        box-shadow: 1px 1px 4px -1px #000000;
       }
 
       h2 {
@@ -22,6 +21,8 @@ export class Topbar extends LitElement {
   ];
 
   render() {
-    return html`<div class="main-container"><h2>Agile-Harmony</h2></div>`;
+    return html`<div class="main-container elevation-1">
+      <h2>Agile-Harmony</h2>
+    </div>`;
   }
 }

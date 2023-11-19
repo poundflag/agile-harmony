@@ -9,7 +9,6 @@ export const releaseSummaryStyle = css`
     position: relative;
     background-color: var(--surface-dim);
     color: var(--on-surface);
-    box-shadow: 0px 1px 3px 1px #000000;
   }
 
   .top-container {

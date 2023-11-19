@@ -10,7 +10,7 @@ import de.github.poundflag.agileharmony.model.Release;
 import de.github.poundflag.agileharmony.service.ReleaseService;
 
 @RestController()
-@RequestMapping("release/")
+@RequestMapping("release")
 public class ReleaseController {
 
     ReleaseService releaseService;
@@ -19,7 +19,7 @@ public class ReleaseController {
         this.releaseService = releaseService;
     }
 
-    @GetMapping("all")
+    @GetMapping("/all")
     public List<Release> getAllReleases() {
         return releaseService.getReleases();
     }
